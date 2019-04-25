@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane layoutY="27.0" prefHeight="275.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Sensor Tests">
+               <content>
+                  <Label fx:id="sensorTestLabel" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="350.0" wrapText="true" />
+               </content>
+            </Tab>
+            <Tab text="Test_Class Tests">
+               <content>
+                  <Label fx:id="testClassLabel" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="350.0" wrapText="true" />
+               </content>
+            </Tab>
+          <Tab text="Average">
+               <content>
+                  <Label fx:id="averageLabel" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="350.0" wrapText="true" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="400.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <Menu mnemonicParsing="false" text="Open File">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#openstdData" text="stdData" />
+                    </items>
+                  </Menu>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
